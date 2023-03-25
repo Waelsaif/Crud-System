@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+	</style>
+	<script src="https://kit.fontawesome.com/f9ca423d9a.js" crossorigin="anonymous"></script>
+	<title>AB Pharmacy</title>
+
+</head>
+<body>
+	<div class="container">
+		<div id="notifcation">	
+		</div>
+		<div class="wrapper">
+			<input type="checkbox" id="mode" name="checkbox" class="switch">
+		</div>
+			
+			
+			
+		
+		<div class="header">
+			<H1 id="h">AB Pharmacy</H1>
+			<p>Management system</p>
+		</div>
+		<div class="inputs">
+			<input type="text" id="Name"  placeholder="Medication">
+			<input type="text" id="Dose"  placeholder="Dose">
+			<input type="text" id="Route" placeholder="Route">
+			<input type="text" id="Unit"  placeholder="Unit" onkeyup="checkUnit()">
+			<input type="text" id="Price" placeholder="Price" onkeyup="getTotal()">
+			<input type="text" id="Tax"   placeholder="VAT 15%" disabled="disabled">
+			<div class="Total">
+				<Label>Total Price </Label>
+				<label id="Total" ></label>
+			</div>
+			<div class="Search">
+				<input type="text" id="Search" placeholder="Search" onkeyup="Search(this.value)">
+			</div>
+		</div>
+		
+		<div class="buttons">
+			<button type="submit" id="Create" >CREATE</button>	
+			<button type="submit" id="DeleteAll">DELETE ALL</button>
+		</div>
+		<div class="output">
+			<table>
+				<tr>
+				<th>ID</th>
+				<th>Medication</th>	
+				<th>Dose</th>	
+				<th>Route</th>	
+				<th>Unit</th>	
+				<th>Price</th>	
+				<th>Edit</th>	
+				<th>Delete</th>	
+				</tr>
+				<tbody id="tbody">
+					
+				</tbody>
+
+			</table>
+		</div>
+	</div>
+
+
+
+
+	<script src="script.js"></script>
+</body>
+</html>
