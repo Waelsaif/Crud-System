@@ -19,8 +19,8 @@ body {
   text-transform: uppercase;
   margin: 10px 0px;
 }
-.inputs{
-	position: relative;
+.inputs {
+  position: relative;
 }
 input {
   width: 46%;
@@ -59,7 +59,6 @@ input:hover {
 #DeleteAll {
   background-color: #df2e38;
   width: 35%;
-  
 }
 .buttons button {
   height: 40px;
@@ -91,7 +90,7 @@ table td {
   padding: 10px 0px;
 }
 i {
-	cursor: pointer;
+  cursor: pointer;
 }
 #notifcation {
   width: 100%;

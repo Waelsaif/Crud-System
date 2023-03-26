@@ -41,7 +41,7 @@ mode.onclick = function () {
   }
 }
 
-function getTotal () {
+function getTotal() {
   if (price.value != '') {
     if (isNaN(price.value)) {
       notification.style = 'top:0; background-color: #DF2E38 '
@@ -56,7 +56,7 @@ function getTotal () {
     total.innerHTML = ''
   }
 }
-function checkUnit () {
+function checkUnit() {
   if (unit.value != '') {
     if (isNaN(unit.value) || unit.value < 1) {
       notification.style = 'top:0; background-color: #DF2E38 '
@@ -77,7 +77,7 @@ if (localStorage.product != null) {
   products = []
 }
 
-function counter () {
+function counter() {
   if (products.length <= 0) {
     deleteAll.innerHTML = ' DELETE ALL'
   } else {
@@ -117,7 +117,7 @@ create.onblur = function () {
   notification.style = 'top:-30; background-color: #28783f'
 }
 
-function clear () {
+function clear() {
   Name.value = ''
   dose.value = ''
   price.value = ''
@@ -126,7 +126,7 @@ function clear () {
   total.innerHTML = ''
 }
 
-function showData () {
+function showData() {
   let table = ''
   for (let i = 0; i < products.length; i++) {
     table += `
@@ -143,11 +143,11 @@ function showData () {
 		`
   }
   document.getElementById('tbody').innerHTML = table
-  for (let i = 0; i < products.length; i++) {}
+  for (let i = 0; i < products.length; i++) { }
 }
 showData()
 
-function Delete (i) {
+function Delete(i) {
   let sum = products[i].unit - 1
   products[i].unit = sum
   if (sum == 0) {
@@ -171,7 +171,7 @@ deleteAll.onclick = function () {
 }
 clear()
 
-function update (i) {
+function update(i) {
   Name.value = products[i].Name
   dose.value = products[i].dose
   unit.value = products[i].unit
@@ -189,7 +189,7 @@ function update (i) {
   })
 }
 
-function Search (val) {
+function Search(val) {
   let table = ''
   for (let i = 0; i < products.length; i++) {
     if (products[i].Name.includes(val)) {
